@@ -1,0 +1,159 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Background Color (light gray): #d3d3d3;
+Link color (blue): #0000ff;
+visited link (purple): #800080;
+ */
+
+/* elements */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --link-color: #00f;
+  --link-visited: #800080;
+  --link-active: #489c79;
+  --button-background: #357b70;
+  --body-color: #2b2b2b;
+  --body-background: #d3d3d3;
+  --button-color: #fff;
+  --weight-standard: 400;
+}
+
+body {
+  background-color: var(--body-background);
+  font-family: "roboto", sans-serif;
+  font-weight: var(--weight-standard);
+  line-height: 1.6;
+  color: var(--body-color);
+  font-size: 16px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--link-active);
+}
+
+p {
+  font-weight: var(--weight-standard);
+}
+
+/* navigation */
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+header {
+  font-size: 20px;
+  font-weight: var(--weight-standard);
+}
+
+/* logo */
+
+header img {
+  display: flex;
+  height: 150px;
+  width: 250px;
+  max-width: 458px;
+  margin: -50px 20px 20px -30px;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+/* button */
+
+button,
+.button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* profile */
+
+.profile {
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* window */
+.profile__portrait {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  margin: 0px 40px;
+  border-radius: 50%;
+  float: left;
+}
+
+.profile__portrait img {
+  width: 250px;
+  margin-top: -30px;
+}
+
+/* footer */
+
+.page-footer {
+  text-align: center;
+  align-items: center;
+}
+
+.social-media img {
+  margin: 0px 3px;
+}

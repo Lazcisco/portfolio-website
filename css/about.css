@@ -1,0 +1,77 @@
+:root {
+  --thead-background: #00ffff;
+}
+
+.about-me {
+  display: inline-block;
+  text-align: center;
+  margin: 0 30% 0 30%;
+}
+
+table {
+  width: 80%;
+  text-align: left;
+  margin: 2% 10% 5% 10%;
+}
+
+thead {
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: var(--thead-background);
+}
+
+td {
+  padding: 5px;
+}
+table,
+tr {
+  border: 1px solid #778899;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+@keyframes cloud-move-reverse {
+  0% {
+    transform: translate(446px, 48px);
+  }
+  100% {
+    transform: translate(100px, 48px);
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
