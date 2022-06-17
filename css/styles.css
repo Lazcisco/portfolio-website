@@ -150,6 +150,10 @@ button:focus,
 /* footer */
 
 .page-footer {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
   text-align: center;
   align-items: center;
 }
